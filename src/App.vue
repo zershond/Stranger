@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Index></Index>
+    <MyInfo></MyInfo>
     <!--<img src="./assets/logo.png">-->
     <!--<router-view></router-view>-->
   </div>
@@ -8,9 +9,10 @@
 
 <script>
 import Index from './index.vue';
+import MyInfo from './components/myinfo.vue'
 export default {
   name: 'app',
-  components: {Index}
+  components: {Index, MyInfo}
 }
 </script>
 
@@ -34,7 +36,8 @@ li{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  overflow: auto;
+  /*color: #2c3e50;*/
+  /*margin-top: 60px;*/
 }
 </style>

@@ -4,13 +4,17 @@
 var express = require('express');
 var path = require('path');
 var url = require('url');
-var app = express();
 
+var user = require('./router/userRoute');
+
+var app = express();
 var router = express.Router();
 
 app.use('/', function (req, res, next) {
   res.send("respond with a resource");
 })
+
+app.use('/user', user);
 
 app.listen(1880);
 
